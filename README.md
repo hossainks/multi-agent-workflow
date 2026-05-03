@@ -132,7 +132,7 @@ MYSQL_HOST=127.0.0.1
 MYSQL_PORT=3306
 MYSQL_USER=your_db_user
 MYSQL_PASS=your_db_password
-MYSQL_DB=rahulshettyacademy
+MYSQL_DB=your_database
 ```
 
 **4. Place your Postman collection**
