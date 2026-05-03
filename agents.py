@@ -57,7 +57,7 @@ async def main():
         2. Extract the registration data from DatabaseAgent's REGISTRATION_DATA message
         3. Check APIAgent's response for actual login success/failure status
         4. Only save data if login was actually successful
-        5. Open C:\\Users\\FXDCIU\\files_Claude\\devdata.xlsx
+        5. Open C:\\Users\\FXDCIU\\Desktop\\File-Test\\devdata.xlsx
         6. Add the registration data with current timestamp
         7. Save and verify the data
         
@@ -68,7 +68,7 @@ async def main():
 
     participants = [database_agent, restapi_agent, excel_agent]
 
-    termination_condition = TextMentionTermination("registration process complete")
+    termination_condition = TextMentionTermination("REGISTRATION PROCESS COMPLETE")
 
     team = RoundRobinGroupChat(participants=participants, termination_condition=termination_condition)
 
