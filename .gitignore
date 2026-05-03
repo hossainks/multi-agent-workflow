@@ -25,9 +25,6 @@ build/
 # Node (npx/MCP server usage)
 node_modules/
 
-# JetBrains IDE
-.idea/
-
 # VS Code
 .vscode/
 

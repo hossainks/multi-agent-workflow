@@ -1,0 +1,11 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+# IntelliJ module & datasource files
+*.iml
+*.iws
+/dataSources/
+/dataSources.local.xml
+/uiDesigner.xml
