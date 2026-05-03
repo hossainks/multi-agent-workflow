@@ -26,3 +26,41 @@ class McpConfig:
             }
         )
         return McpWorkbench(server_params= mysql_params)
+
+    def get_restapi_workbench(self):
+        restapi_params = StdioServerParams(
+            command="npx",
+            args=[
+                "-y",
+                "dkmaker-mcp-rest-api"
+            ],
+            env={
+                "REST_BASE_URL": "https://rahulshettyacademy.com",
+                "HEADER_Accept": "application/json"
+            }
+        )
+        return McpWorkbench(server_params= restapi_params)
+
+    def get_excel_workbench(self):
+        excel_params = StdioServerParams(
+            command="npx",
+            args=[
+                "--yes",
+                "@negokaz/excel-mcp-server"
+            ],
+            env={
+                "EXCEL_MCP_PAGING_CELLS_LIMIT": "4000"
+            }
+        )
+        return McpWorkbench(server_params= excel_params)
+
+    def get_filesystem_workbench(self):
+        filesystem_params = StdioServerParams(
+            command="npx",
+            args=[
+                "-y",
+                "@modelcontextprotocol/server-filesystem",
+                "C:\\Users\\FXDCIU\\Desktop\\Claude-Test\\Json-Files"
+            ]
+        )
+        return McpWorkbench(server_params= filesystem_params)
